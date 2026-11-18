@@ -28,6 +28,10 @@
       "privacyTerms": {
         "title": "Terms of Use & Privacy Policy | OpenAgriNet",
         "description": "Terms of Use and Privacy Policy for the OpenAgriNet website, maintained by EkStep Foundation."
+      },
+      "blogs": {
+        "title": "Blog | OpenAgriNet",
+        "description": "Stories, insights and updates from OpenAgriNet: perspectives on AI, open networks and digital public infrastructure for agriculture."
       }
     }
   },
@@ -42,7 +46,7 @@
     "home": "OpenAgriNet home",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "blogs": "Blogs"
+    "blogs": "Blog"
   },
   "Footer": {
     "copyright": "@{year} OpenAgriNet. All rights reserved.",
@@ -67,7 +71,7 @@
     "community": "Community",
     "resources": "Resources",
     "events": "Events",
-    "blogs": "Blogs"
+    "blogs": "Blog"
   },
   "AboutUs": {
     "hero": {
@@ -94,29 +98,7 @@
       "description": "OAN is being built by a multidisciplinary team bringing together expertise across digital public infrastructure, agriculture, artificial intelligence, technology, ecosystem development and implementation.<br></br>Our team works across the network—from architecture and technology to ecosystem partnerships, product development and field implementation.",
       "cta": "Meet the Team",
       "previous": "Previous team members",
-      "next": "Next team members",
-      "members": {
-        "ravi": {
-          "name": "Ravi Kumar",
-          "role": "Program Director"
-        },
-        "meeraOne": {
-          "name": "Meera Srinivasan",
-          "role": "Product Lead"
-        },
-        "meeraTwo": {
-          "name": "Meera Srinivasan",
-          "role": "Product Lead"
-        },
-        "meenu": {
-          "name": "Meenu Bansal",
-          "role": "Product Lead"
-        },
-        "karthika": {
-          "name": "Karthika",
-          "role": "UI/UX Designer"
-        }
-      }
+      "next": "Next team members"
     },
     "partners": {
       "eyebrow": "Our Partners",
@@ -435,22 +417,22 @@
         },
         "contribute": {
           "title": "Contribute",
-          "summary": "Contribute code, standards, data or expertise.",
+          "summary": "Contribute code, knowledge or expertise.",
           "badge": "03 CONTRIBUTE",
           "heading": "Contribute to OpenAgriNet",
-          "description": "Help shape OpenAgriNet by sharing code, standards, data\nand expertise with an open community working for farmers.",
+          "description": "Help shape OpenAgriNet in the open. Improve its building\nblocks and share the language and knowledge that make\nanswers better for farmers.",
           "ways": [
             {
               "title": "Contribute code",
-              "description": "Improve OAN building blocks, tools and reference\nimplementations."
+              "description": "Improve OAN’s open building blocks, tools and\nreference implementations on GitHub."
             },
             {
               "title": "Shape open standards",
-              "description": "Help define specifications that keep services\ninteroperable."
+              "description": "Give feedback on the specifications that keep\nservices interoperable."
             },
             {
-              "title": "Share data and expertise",
-              "description": "Bring domain knowledge and datasets that make\nsolutions more useful."
+              "title": "Share language and knowledge",
+              "description": "Bring local-language terms, verified knowledge\nand field expertise."
             }
           ]
         },
@@ -459,19 +441,19 @@
           "summary": "Advance DPI, AI and interoperability thinking.",
           "badge": "04 RESEARCH",
           "heading": "Research with OpenAgriNet",
-          "description": "Advance thinking on digital public infrastructure, AI and\ninteroperability for agriculture through open research.",
+          "description": "Advance research on digital public infrastructure and AI for\nagriculture, in the open, so the wider ecosystem can build\non what is learned.",
           "ways": [
             {
-              "title": "Study DPI for agriculture",
-              "description": "Explore how open infrastructure can improve\nagricultural services."
+              "title": "Study agri-DPI",
+              "description": "Explore how open, interoperable infrastructure\ncan improve agricultural services."
             },
             {
-              "title": "Advance responsible AI",
-              "description": "Research AI approaches that are safe, inclusive\nand useful for farmers."
+              "title": "Advance AI for local languages",
+              "description": "Research voice and language AI that is accurate,\nsafe and inclusive for farmers."
             },
             {
-              "title": "Publish open insights",
-              "description": "Share findings that help the wider ecosystem\nlearn and improve."
+              "title": "Publish open findings",
+              "description": "Share findings and methods openly so others can\nlearn from and build on them."
             }
           ]
         },
@@ -488,11 +470,11 @@
             },
             {
               "title": "Support implementations",
-              "description": "Bring resources and expertise to real-world\ndeployments."
+              "description": "Bring resources and expertise to live and planned\ndeployments."
             },
             {
-              "title": "Grow the network",
-              "description": "Connect organisations to expand the reach\nof open agricultural services."
+              "title": "Join as a provider",
+              "description": "Connect your services or knowledge to the\nnetwork. Your data stays at its source."
             }
           ]
         }
@@ -503,11 +485,11 @@
       "titleStart": "Let’s build the future of ",
       "titleAccent": "agriculture together",
       "description": "Connect with the OpenAgriNet community and explore opportunities to build, implement, contribute, research and collaborate.",
-      "action": "Get Involved",
       "join": "Join Our Community"
     }
   },
   "Events": {
+    "backToEvents": "Back to all events",
     "hero": {
       "eyebrow": "Events",
       "titleLine1": "Connecting ideas,",
@@ -521,31 +503,10 @@
       "description": "Stay connected with upcoming events, workshops and discussions bringing\ntogether the OpenAgriNet ecosystem.",
       "linkLabel": "View Details",
       "action": "View All Events",
-      "items": {
-        "webinar": {
-          "type": "WEBINAR",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "Open Digital Ecosystems for Sustainable Agriculture",
-          "description": "A discussion on how open networks, data and AI can enable inclusive and sustainable agriculture.",
-          "tag": "Ongoing",
-          "imageAlt": "A seedling in a field connected to digital icons for weather, farming and data"
-        },
-        "workshop": {
-          "type": "WORKSHOP",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "Building Solutions with OpenAgriNet",
-          "description": "A hands-on workshop for developers, innovators and government partners to explore OpenAgriNet building blocks and real-world use cases.",
-          "tag": "New Delhi",
-          "imageAlt": "A farmer using a tablet in a green paddy field"
-        },
-        "conference": {
-          "type": "CONFERENCE",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "OpenAgriNet Ecosystem Summit 2026",
-          "description": "Bringing together policymakers, institutions, innovators and ecosystem partners to accelerate open digital agriculture.",
-          "tag": "Bengaluru, India",
-          "imageAlt": "A speaker at a podium addressing a conference audience"
-        }
+      "categories": {
+        "webinar": "WEBINAR",
+        "workshop": "WORKSHOP",
+        "conference": "CONFERENCE"
       }
     },
     "past": {
@@ -554,31 +515,10 @@
       "description": "Explore highlights from past events, workshops and conversations where the OpenAgriNet community came together to share ideas, exchange knowledge and drive innovation in agriculture.",
       "linkLabel": "View Highlights",
       "action": "View All Past Events",
-      "items": {
-        "digitalAgriculture": {
-          "type": "CONFERENCE-PAST EVENTS",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "Building Digital Agriculture Solutions",
-          "description": "An interactive workshop focused on practical tools and connected agricultural services.",
-          "tag": "Pune, India",
-          "imageAlt": "A smiling farmer working on a laptop in a green field"
-        },
-        "workshop": {
-          "type": "WORKSHOP-PAST EVENTS",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "Building Solutions with OpenAgriNet",
-          "description": "A hands-on workshop for developers, innovators and government partners to explore OpenAgriNet building blocks and real-world use cases.",
-          "tag": "New Delhi",
-          "imageAlt": "A farmer and a field officer looking at a tablet in a paddy field"
-        },
-        "conference": {
-          "type": "CONFERENCE-PAST EVENTS",
-          "date": "25 Aug 2026, 10:30 AM",
-          "title": "OpenAgriNet Ecosystem Summit 2026",
-          "description": "Bringing together policymakers, institutions, innovators and ecosystem partners to accelerate open digital agriculture.",
-          "tag": "Bengaluru, India",
-          "imageAlt": "A speaker at a podium addressing a conference audience"
-        }
+      "categories": {
+        "webinar": "WEBINAR-PAST EVENTS",
+        "workshop": "WORKSHOP-PAST EVENTS",
+        "conference": "CONFERENCE-PAST EVENTS"
       }
     }
   },
@@ -770,6 +710,45 @@
           ]
         }
       ]
+    }
+  },
+  "Blogs": {
+    "hero": {
+      "eyebrow": "Blog",
+      "titleLine1": "Stories, insights and updates",
+      "titleLine2Lead": "from ",
+      "titleLine2": "OpenAgriNet.",
+      "description": "Perspectives on AI, open networks and digital public infrastructure for agriculture.",
+      "imageAlt": "A watercolour village with paddy fields, palm trees and hills"
+    },
+    "featured": {
+      "eyebrow": "Featured Blog",
+      "title": "Explore what’s coming up.",
+      "description": "Stay connected with upcoming events, workshops and discussions bringing together the OpenAgriNet ecosystem."
+    },
+    "all": {
+      "eyebrow": "All Blogs",
+      "viewAll": "View All Blogs"
+    },
+    "categories": {
+      "implementation": "Implementation",
+      "technology": "Technology",
+      "partnerships": "Partnerships",
+      "insights": "Insights"
+    },
+    "readMore": "Read More",
+    "article": {
+      "share": "Share this blog",
+      "save": "Save this blog",
+      "copyLink": "Copy link to this blog",
+      "linkCopied": "Link copied",
+      "contents": "Inside This Article",
+      "subscribe": {
+        "title": "Stay updated with OpenAgriNet",
+        "description": "Get the latest stories, insights and implementations in your inbox.",
+        "button": "Subscribe"
+      },
+      "related": "Related Blog"
     }
   }
 }

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import { Link } from '@/i18n/navigation';
+=======
+import ContentCard from '@/components/common/ContentCard';
+import { blogHref } from '@/lib/blogs';
+>>>>>>> fe1aa2db68dd5f202e34c240cac08252e7ed739d
 import type { BlogSummary } from '@/lib/blogTypes';
 
 type Props = {
@@ -10,6 +15,7 @@ type Props = {
   categoryLabel: string;
   dateLabel: string;
   linkLabel: string;
+<<<<<<< HEAD
   imageAlt: string;
   featured?: boolean;
 };
@@ -71,5 +77,25 @@ export default function BlogCard({ blog, categoryLabel, dateLabel, linkLabel, im
         </Box>
       </Box>
     </Box>
+=======
+};
+
+// Figma "All Blogs" card: the same card design as the Events page, with the blog's location as the tag.
+// Read More opens the blog's page or the external article (new tab); a blog with neither has no link
+export default function BlogCard({ blog, categoryLabel, dateLabel, linkLabel }: Props) {
+  return (
+    <ContentCard
+      image={blog.coverImage}
+      imageAlt={blog.imageAlt}
+      category={categoryLabel}
+      date={dateLabel}
+      dateTime={blog.date}
+      title={blog.title}
+      summary={blog.summary}
+      tag={blog.location}
+      linkLabel={linkLabel}
+      href={blogHref(blog)}
+    />
+>>>>>>> fe1aa2db68dd5f202e34c240cac08252e7ed739d
   );
 }
