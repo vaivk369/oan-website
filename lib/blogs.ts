@@ -2,12 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { blogCategories, type BlogCategory } from '@/content/blogs/categories';
-<<<<<<< HEAD
-import type { BlogSummary } from './blogTypes';
-=======
 import type { BlogHeading, BlogSummary } from './blogTypes';
 import { toDate } from './dates';
->>>>>>> fe1aa2db68dd5f202e34c240cac08252e7ed739d
 
 // Build-time only (uses fs). To move to a headless CMS later, reimplement these functions and keep the signatures.
 // One folder per locale (content/blogs/<locale>/<slug>.md). A locale only shows blogs in its own folder; no cross-language fallback.
@@ -23,27 +19,28 @@ function parse(locale: string, file: string): Blog {
   const { data, content } = matter(fs.readFileSync(path.join(dirFor(locale), file), 'utf8'));
   const slug = file.replace(/\.md$/, '');
   const str = (k: string) => (typeof data[k] === 'string' && data[k].trim() ? (data[k] as string) : fail(file, `"${k}" is required`));
-<<<<<<< HEAD
-  // gray-matter parses bare YAML dates into Date objects
-  const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : str('date');
-=======
+
   // gray-matter parses bare YAML dates into Date objects; a date with a time must be quoted
   const date = data.date instanceof Date ? data.date.toISOString().slice(0, 10) : str('date');
   if (!/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2})?$/.test(date) || Number.isNaN(toDate(date).getTime()))
     fail(file, '"date" must be yyyy-mm-dd, or "yyyy-mm-ddThh:mm" in quotes');
->>>>>>> fe1aa2db68dd5f202e34c240cac08252e7ed739d
-  if (!blogCategories.includes(data.category)) fail(file, `unknown category "${data.category}" (allowed: ${blogCategories.join(', ')})`);
+
+  // Category, author and cover image are optional; when a category is given it must be one of the listed ones
+  if (data.category !== undefined && !blogCategories.includes(data.category))
+    fail(file, `unknown category "${data.category}" (allowed: ${blogCategories.join(', ')})`);
+  const opt = (k: string) => (typeof data[k] === 'string' && data[k].trim() ? (data[k] as string) : undefined);
+  const coverImage = opt('coverImage');
   if (data.type !== 'internal' && data.type !== 'external') fail(file, '"type" must be internal or external');
   if (data.type === 'external' && !/^https:\/\//.test(data.externalUrl ?? '')) fail(file, 'external blogs need an https "externalUrl"');
   return {
     slug,
     title: str('title'),
     date,
-    author: str('author'),
+    author: opt('author'),
     summary: str('summary'),
-    coverImage: str('coverImage'),
-    imageAlt: typeof data.imageAlt === 'string' && data.imageAlt.trim() ? data.imageAlt : str('title'),
-    category: data.category as BlogCategory,
+    coverImage,
+    imageAlt: coverImage ? (opt('imageAlt') ?? str('title')) : undefined,
+    category: data.category as BlogCategory | undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     location: typeof data.location === 'string' ? data.location : undefined,
     featured: data.featured === true,
@@ -66,12 +63,6 @@ export function getAllBlogs(locale: string): Blog[] {
 
 export const getFeaturedBlogs = (locale: string, limit = 3) => getAllBlogs(locale).filter((b) => b.featured).slice(0, limit);
 export const getBlogBySlug = (locale: string, slug: string) => getAllBlogs(locale).find((b) => b.slug === slug);
-<<<<<<< HEAD
-// Only internal blogs get a detail page
-export const getBlogSlugs = (locale: string) => getAllBlogs(locale).filter((b) => b.type === 'internal').map((b) => b.slug);
-// Strip the body so the client bundle only carries card data
-export const toSummary = ({ body: _body, ...summary }: Blog): BlogSummary => summary;
-=======
 // Only hosted blogs with article text get a detail page (and a sitemap entry)
 export const getBlogSlugs = (locale: string) => getAllBlogs(locale).filter((b) => b.hasArticle).map((b) => b.slug);
 // Strip the body so the client bundle only carries card data
@@ -86,7 +77,8 @@ export function getRelatedBlogs(locale: string, slug: string, limit = 2): Blog[]
   const all = getAllBlogs(locale);
   const current = all.find((b) => b.slug === slug);
   const others = all.filter((b) => b.slug !== slug);
-  return [...others.filter((b) => b.category === current?.category), ...others.filter((b) => b.category !== current?.category)].slice(0, limit);
+  const sameCategory = (b: Blog) => !!current?.category && b.category === current.category;
+  return [...others.filter(sameCategory), ...others.filter((b) => !sameCategory(b))].slice(0, limit);
 }
 
 // Card date, e.g. "Oct 28, 2026"
@@ -108,4 +100,3 @@ export function getBlogHeadings(body: string): BlogHeading[] {
     return { id: n > 1 ? `${base}-${n}` : base, text };
   });
 }
->>>>>>> fe1aa2db68dd5f202e34c240cac08252e7ed739d

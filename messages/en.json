@@ -112,6 +112,7 @@
         "ekstep": "EkStep",
         "fide": "FIDE",
         "coss": "COSS",
+        "iiitb": "IIIT Bangalore",
         "ondc": "ONDC",
         "cdpi": "CDPI",
         "cgiar": "CGIAR",
@@ -480,6 +481,14 @@
         }
       }
     },
+    "gallery": {
+      "eyebrow": "GALLERY",
+      "title": "In Action Across the Ecosystem",
+      "description": "Snapshots from pilots, field engagements, community events and collaborative initiatives.",
+      "viewAll": "View All",
+      "previous": "Previous photos",
+      "next": "Next photos"
+    },
     "cta": {
       "eyebrow": "JOIN OUR COMMUNITY",
       "titleStart": "Let’s build the future of ",
@@ -490,6 +499,12 @@
   },
   "Events": {
     "backToEvents": "Back to all events",
+    "categories": {
+      "webinar": "WEBINAR",
+      "workshop": "WORKSHOP",
+      "conference": "CONFERENCE",
+      "panel-discussion": "PANEL DISCUSSION"
+    },
     "hero": {
       "eyebrow": "Events",
       "titleLine1": "Connecting ideas,",
@@ -502,24 +517,14 @@
       "title": "Explore what’s coming up.",
       "description": "Stay connected with upcoming events, workshops and discussions bringing\ntogether the OpenAgriNet ecosystem.",
       "linkLabel": "View Details",
-      "action": "View All Events",
-      "categories": {
-        "webinar": "WEBINAR",
-        "workshop": "WORKSHOP",
-        "conference": "CONFERENCE"
-      }
+      "action": "View All Events"
     },
     "past": {
       "eyebrow": "PAST EVENTS",
       "title": "Moments that brought us together.",
       "description": "Explore highlights from past events, workshops and conversations where the OpenAgriNet community came together to share ideas, exchange knowledge and drive innovation in agriculture.",
       "linkLabel": "View Highlights",
-      "action": "View All Past Events",
-      "categories": {
-        "webinar": "WEBINAR-PAST EVENTS",
-        "workshop": "WORKSHOP-PAST EVENTS",
-        "conference": "CONFERENCE-PAST EVENTS"
-      }
+      "action": "View All Past Events"
     }
   },
   "Legal": {
@@ -722,9 +727,7 @@
       "imageAlt": "A watercolour village with paddy fields, palm trees and hills"
     },
     "featured": {
-      "eyebrow": "Featured Blog",
-      "title": "Explore what’s coming up.",
-      "description": "Stay connected with upcoming events, workshops and discussions bringing together the OpenAgriNet ecosystem."
+      "eyebrow": "Featured Blog"
     },
     "all": {
       "eyebrow": "All Blogs",
